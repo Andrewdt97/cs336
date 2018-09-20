@@ -1,0 +1,8 @@
+3.1 
+	a. Node.js is a javascript enviornment that runs the code while Express.js is a framework for hosting webservers using Node.
+	b. The point of package.json is to organize your code into a package. Other projects can they add them as dependencies and my guess is that Express uses it for their
+		configuration
+
+3.2
+	a. The files are static because they immutible via the webbrowser, they are simply displayed.
+	b. I assume, because it is a static file, that the data is only transfered once.
