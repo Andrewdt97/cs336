@@ -1,0 +1,44 @@
+/* Andrew Thomas
+   CS 336 Lab04
+*/
+
+div.menu-bar ul ul {
+  display: none;
+}
+
+div.menu-bar li:hover > ul {
+  display: block;
+}
+
+/*** CSS Tutorial: Color page ***/
+
+/* page font */
+body {
+  font: 16px "Comic Sans MS", cursive;
+  background: url("Blue-rule.png");
+}
+
+/* paragraphs */
+p {
+  color: #00f; /* blue */
+}
+#first {
+  font-style: italic;
+}
+
+p:before {
+	content: "" url(Yellow-pin.png);
+}
+
+/* initial letters */
+strong {
+  color: #f00; /* red */
+  background-color: #ddf; /* pale blue */
+  font: 200% serif;
+}
+
+.spinach {
+  color: #080; /* dark green */
+  background-color: #ddf;
+}
+

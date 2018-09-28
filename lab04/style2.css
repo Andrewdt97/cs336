@@ -1,0 +1,41 @@
+/* Andrew Thomas
+   CS 336 Lab04
+*/
+
+/* numbered paragraphs */
+h3.numbered {counter-reset: mynum;}
+ 
+p.numbered:before {
+  content: counter(mynum) ": ";
+  counter-increment: mynum;
+  font-weight: bold;
+}
+
+#toRoman {
+	list-style: lower-roman;
+	margin-bottom: 8px;
+	border: 5px solid blue;
+}
+
+body {counter-reset: headnum;}
+
+h3:before {
+  content: "(" counter(headnum, upper-latin) ") ";
+  counter-increment: headnum;
+}
+
+h3 {
+	border-top: 1px solid gray;
+}
+
+ul, #numbered {
+  border: 1em solid #69b;
+  padding-right:1em;
+  float: left;
+}
+
+img {
+	position: fixed;
+	top: 2px;
+	right: 2px;
+}
