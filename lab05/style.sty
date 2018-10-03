@@ -1,0 +1,85 @@
+/*! Andrew Thomas
+ * CS 336 Lab05
+ */
+
+body 
+        font: 24px Helvetica
+        background: #999999
+        blue = #ccccff // Outputs the color blue
+        yellow = #dddd88 // Outputs the color yellow
+    
+
+    #main 
+        min-height: 800px
+        margin: 0px
+        padding: 0px
+        display: flex
+        flex-flow: row
+        font-family: fantasy // It's sad because most computers don't have a fantasy font
+    
+ 
+    #main > article 
+        margin: 4px
+        padding: 5px
+        border: 1px solid #cccc33
+        border-radius: 0pt
+        green = #dddd88
+        background: green
+        flex: 3 1 60%
+        order: 2
+    
+
+    #main > nav 
+        margin: 4px
+        padding: 5px
+        border: 1px solid #8888bb
+        border-radius: 0pt
+        background: blue
+        flex: 1 6 20%
+        order: 1
+        text-align: right
+        font-family: sans-serif
+    
+  
+    #main > aside 
+        margin: 4px
+        padding: 5px
+        border: 0px solid #8888bb
+        border-radius: 0pt
+        background: blue
+        flex: 1 6 20%
+        order: 3
+        font-family: sans-serif
+    
+ 
+    header, footer 
+        display: block
+        margin: 4px
+        padding: 5px
+        min-height: 100px
+        border: 1px solid #eebb55
+        border-radius: 0pt
+        background: yellow
+        font: 8px serif
+    
+ 
+    /* Too narrow to support three columns */
+    @media all and (max-width: 640px) 
+        #main, #page 
+            flex-direction: column
+        
+
+        #main > nav 
+            order: 0
+        
+        #main > article, #main > aside 
+        /* Return them to document order */
+            order: 1
+        
+  
+        #main > nav, #main > aside, header, footer 
+            min-height: 50px
+            max-height: 50px
+            text-align: left
+        
+    
