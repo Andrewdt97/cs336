@@ -1,0 +1,37 @@
+// Andrew Thomas
+// CS336 Lab06
+
+
+const express = require('express')
+const app = express()
+const port = 3001
+
+var HttpStatus = require('http-status-codes');
+
+app.get('/request', (req, res) => {
+	res.sendStatus( HttpStatus.OK );
+})
+
+app.head('/request', (req, res) => {
+	res.sendStatus( HttpStatus.PAYMENT_REQUIRED );
+})
+
+app.put('/request', (req, res) => {
+	res.status( HttpStatus.ACCEPTED )
+		.send( app.json() );
+})
+
+app.post('/request', (req, res) => {
+	res.status( HttpStatus.ACCEPTED )
+		.send( app.json() );
+})
+
+app.delete('/request', (req, res) => {
+	res.sendStatus( HttpStatus.NO_CONTENT );
+})
+
+app.all("*", (req, res) => {
+	res.sendStatus( HttpStatus.NOT_IMPLEMENTED );
+})
+
+app.listen(port, () => console.log(`I'm listening on ${port}!`));

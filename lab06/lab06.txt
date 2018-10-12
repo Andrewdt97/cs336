@@ -1,0 +1,21 @@
+Andrew Thomas
+Cs 226 Lab06
+
+6.1
+
+Identify the request methods that you can and can’t test using the two tools listed above. If a method cannot be testing using a particular tool, explain why this is the case. List the Curl commands you used successfully.
+
+You can only make GET requests with browsers. The rest can be run in cUrl.
+
+
+What is the most appropriate HTTP response code for pages that aren’t defined by an Express route?
+
+404 is the default for non-existant routes.
+
+
+6.2
+What HTTP methods do forms support?
+Forms support the POST method.
+
+How is the form data being passed back to the server and what syntactic form does it take? Is the data modified in any way?
+The data is sent to the server in JSON format via a POST request. It is not modified other than putting it in a JSON.
