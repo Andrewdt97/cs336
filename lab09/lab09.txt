@@ -1,0 +1,35 @@
+Andrew Thomas
+CS 336 Lab09
+
+    What good has this bundling done? How big is the new bundle file? Check the Chrome DevTools network log to see what files are being loaded.
+    The new bundle file is only 6.0kbs and allows the browser to not worry about some libraries.
+
+    What role did Babel play in the bundling?
+    It makes sure that the bundle is capatible with older browsers.
+
+    Can you just load file:///path…/index.html using the browser? Why or why not?
+    You can, but none of the comments are there. Only the html frame.
+
+    In webpack.config.js, what does the loader test entry test: /\.jsx?$/ do?
+    Tests every file with the .jsx extension with the Babel loader.
+
+
+    Check out the new dist/index.html and dist/bundle.js. How are they different from the previous versions?
+    The HTML now imports the bundle and the bundle has ways of importing the needed React elements
+
+    What good is it to replace the CDN library loads with module imports?
+    Everything is done locally on the server so it is faster.
+
+    Check the network log. How many of the new modules you built are being loaded? How about the CSS file?
+    Only the bundle and the html are loaded. Now that's effeciency.
+
+
+    Try out both ports and explain the difference between them.
+        localhost:3001 — Try editing one of the React module files. Explain what happens, both to the displayed SPA webpage and to the bundle/index files.
+        	My SPA updates in real time. It looks like the files are retransfered when the save is made. On comment.json changes, they just dissapear with the next read
+
+        localhost:3000 — Try loading /api/comments. Explain what you get. Does the SPA page running on this port change (due to the edits made above) as well?
+        	Nope, no effect here.
+
+    Is it worth all this trouble to build a development configuration?
+    	Probably. The ability to update in real time without taking your site down can be important. Also it allows for a lot more flexibility and modularization with web desgin.
