@@ -1,0 +1,11 @@
+Andrew Thomas
+CS 336 Lab 11
+
+    Compare and contrast your development and production deployments and explain how each is designed.
+    	The production enviornment is optomized for performance while the development has nice features to make updating easier.
+    	In the production enviornment, we are uglifying the JS and running other optimizations while the development deployment
+    	had the nifty auto reload on modules.
+
+    List the optimizations you’ve configured for this production version and, if possible, find evidence of then in the deployed application files.
+    	UglifyJS and OptomizeOccuranceOrderPlugin. The bundle.js is now much more compact (less white space), I don't see where OptomizeOccurranceOrderPlugin
+    	has an effect, but it minimizes the id length for modules and chunks.
