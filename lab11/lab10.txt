@@ -1,0 +1,28 @@
+Andrew Thomas
+CS 336 Lab10
+
+Part 1.
+a. Compare and contrast MongoDB and the SQL databases you’ve used before. Are there things that one can do that the other can’t?
+	Mongo is much more flexible than SQL. There is no set schema. You can enter any data into the database at any time. For instance, as a test
+		I just inserted into comments a object with a field "pasta" and there was no issue. Mongo also naturally returns JSON and other SQL
+		databased would require some sort of interface... Upon trying to answer 2a, I realized there was an issue, though it was with the Comment class trying to
+		to find the "author" when only "pasta" was availible.
+
+b. You could run MongoDB locally. What advantages and/or disadvantages would that bring with respect to the cloud database you have now?
+	It would be much faster to run locally because the data does not have to be gotten from the cloud. However, if it got very large, it may be too much
+		for your system. The cloud also has more reliability than a local machine.
+
+c. You’ve built a “sandbox” database on mLab. Could you use this for a production database? Why or why not?
+	Probably not. It looks as though the traffic it can support is quite limited and storage is very limited.
+
+
+
+Part 2.
+a. For this integration of mLab into your application, was it better to run the modified server (npm start) or the full Webpack development environment (npm run dev)? Why?
+	Seeing as mLab is external to your application, I see no direct benefit in using the development enviornment.
+
+b. Explain what happens when you modify the database using mLab’s web interface rather than your application? Try adding/updating/deleting comment documents.
+	It updates as expected. mLab interfaces directly with your db and so any changes made will be pulled by the application.
+
+c. Is this comments application the sort of application that should use an SQL or a noSQL database? Explain your answer.
+	The noSQL sure seems fast, effecient, and flexible for this sort of thing. Especially with the automatic JSON generaiton.
