@@ -9,3 +9,10 @@ CS 336 Lab 11
     List the optimizations you’ve configured for this production version and, if possible, find evidence of then in the deployed application files.
     	UglifyJS and OptomizeOccuranceOrderPlugin. The bundle.js is now much more compact (less white space), I don't see where OptomizeOccurranceOrderPlugin
     	has an effect, but it minimizes the id length for modules and chunks.
+
+
+    What advantage is there is deploying an application to a PaaS tool like Heroku?
+    	You don't have to worry about hosting the server yourself. You get more uptime, CI/CD, professional security, and other benefits.
+
+    How does Heroku know how to install and run your application (after pulling it from the specified branch on GitHub)?
+    	The scripts in the package.json!
