@@ -23,10 +23,6 @@ MongoClient.connect(`mongodb://cs336:${process.env.MONGO_PASSWORD}@ds021356.mlab
   if (err) throw err
 
   db = client;
-	app.listen(app.get('port'), function() {
-    console.log('Server started: http://localhost:' + app.get('port') + '/');
-	  app.use('*', express.static(APP_PATH));
-  });
 })
 
 app.set('port', (process.env.PORT || 3000));
@@ -99,3 +95,8 @@ app.delete('/api/comments/:id', function(req, res) {
         });
 });
 
+app.use('*', express.static(APP_PATH));
+
+app.listen(app.get('port'), function() {
+    console.log('Server started: http://localhost:' + app.get('port') + '/');
+  });
