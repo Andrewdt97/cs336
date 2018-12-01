@@ -1,9 +1,9 @@
 import React from 'react';
 import $ from 'jquery';
 
-import CommentList from './commentList';
-import CommentForm from './commentForm';
-import { API_URL, POLL_INTERVAL } from './global';
+import CommentList from './CommentList';
+import CommentForm from './CommentForm';
+import { API_URL, POLL_INTERVAL } from './globals';
 
 module.exports = React.createClass({
     getInitialState: function() {
