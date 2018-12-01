@@ -3,16 +3,16 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Remarkable from 'remarkable';
 import { Router, Route, browserHistory } from 'react-router';
-import $ from 'jquery';
 
 import CommentBox from './CommentBox.js';
+import CommentEdit from './commentEdit.js';
 
+import '../css/base.css';
 
 ReactDOM.render((
-  <Router history={hashHistory}>
-    <Route path="/" component={App}/>
+  <Router history={browserHistory}>
+    <Route path="/" component={CommentBox}/>
     <Route path="/:id" component={CommentEdit} />
   </Router>
-), document.getElementById('app'));
+), document.getElementById('content'));

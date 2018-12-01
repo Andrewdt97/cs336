@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router';
 import $ from 'jquery';
 
-import {API_URL} from './global';
+import {API_URL} from './globals';
 
 module.exports = React.createClass({
     getInitialState: function () {
